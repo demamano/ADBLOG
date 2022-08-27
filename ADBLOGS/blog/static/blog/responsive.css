@@ -1,0 +1,31 @@
+@media (min-width:1000px) {
+    .body-content {
+        background-color: rgb(250, 250, 250);
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        column-gap: 2em;
+
+    }
+
+    .first-col {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .right-side {
+        background-color: blue;
+
+    }
+
+    .social-media {
+        background-color: blue;
+        padding: 10px;
+        margin: 10px 8px;
+        /* border-radius: 50%; */
+
+    }
+}
+
+@media (max-width:1000px) {}

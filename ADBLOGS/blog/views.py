@@ -1,4 +1,4 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Article,Reporter
@@ -8,6 +8,9 @@ def getData(request):
     items = Article.objects.all()
     serializer = ArticleSerializer(items,many=True)
     return Response(serializer.data)
+@api_view(['GET'])
+def home(request):
+    return render(request,'blog/index.html')
 
 
 
