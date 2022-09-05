@@ -1,13 +1,16 @@
 from django.db import models
-class Reporter(models.Model):
-    full_name = models.CharField(max_length=80)
-    def __str__(self):
-        return self.full_name
+from django.utils import timezone
+from django.contrib.auth.models import User
+# class Reporter(models.Model):
+#     full_name = models.CharField(max_length=80)
+#     def __str__(self):
+#         return self.full_name
 class Article(models.Model):
-    pub_date = models.DateField(auto_now_add=True)
+    # pub_date = models.DateField(auto_now_add=True)
+    pub_date = models.DateTimeField(default=timezone.now)
     headline = models.CharField(max_length=200)
     content = models.TextField()
-    reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
+    reporter = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.headline

@@ -10,12 +10,12 @@
 
 .page {
     display: grid;
-    background-color: aqua;
+    /* background-color: aqua; */
     /* grid-template-rows: 1fr 2fr 1fr; */
 }
 
 .main-body {
-    background: #fff;
+    /* background: rgb(230, 224, 224); */
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -123,24 +123,15 @@
     width: auto;
 }
 
-
-
 .middle-side {
-
-    /* background-color: yellow; */
-    display: grid;
-    grid-template-rows: 1fr 6fr;
-
-
-
-}
-
-.welcome-row {
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+   row-gap: 2em;
+    
 }
 
 .listed-information {
-    /* background-color: purple; */
+    background-color: purple;
 }
 
 
@@ -240,7 +231,7 @@
 }
 
 .nav-right {
-    background-color: blue;
+    /* background-color: blue; */
 
 }
 
@@ -284,7 +275,7 @@
 }
 
 .cards {
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -292,7 +283,7 @@
 }
 
 .general-card {
-    background-color: red;
+
     padding: 20px;
     margin: 20px;
 }
@@ -310,7 +301,7 @@
 }
 
 .row-recent-card {
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: row;
     column-gap: 20px;
@@ -337,7 +328,7 @@
 }
 
 .comment-marker {
-    background-color: red;
+    /* background-color: red; */
 }
 
 .share-marker {
@@ -367,7 +358,7 @@
 }
 
 .btn-card {
-    background-color: yellow;
+    /* background-color: yellow; */
     padding: 15px;
 }
 

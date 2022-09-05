@@ -1,6 +1,6 @@
 @media (min-width:1000px) {
     .body-content {
-        background-color: rgb(250, 250, 250);
+        background-color: #ebebeb;
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         column-gap: 2em;
@@ -15,9 +15,15 @@
     }
 
     .right-side {
-        background-color: blue;
+
+        /* background-color: blue; */
+        position: static;
+        overflow: visible;
+        
+
 
     }
+    
 
     .social-media {
         background-color: blue;
