@@ -70,6 +70,7 @@
             </div>
         </div>
         <div class="middle-side">
+            {% for post in posts%}
             <div class="posted-card" style="background-color:#fff;">
                 <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
                     <div class="descriptive-card" style="display:flex; flex-direction:row">
@@ -80,437 +81,25 @@
 
                             <a href="" class="information_body-title" style="font-size:20px;">Dema
                                 Amano</a>
-                            september 2,2022
-
+                            <!-- september 2,2022 -->
+                            {{post.pub_date |date:"F d,Y"}}
                             <div class="reporter-information"
                                 style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
                                 <div class="reporter-profile-image">
                                     <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
                                     width: 40px; border-radius:100%">
                                 </div>
-                                <div class="reporter-name"> Dema Amano</div>
+                                <div class="reporter-name">{{post.reporter.first_name}} {{post.reporter.last_name}}
+                                </div>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
+                            <p>{{post.headline}}</p>
                         </div>
                     </div>
                     <hr>
                     <div class="detail-card" style="background-color: pink;">Dema amano</div>
                 </div>
             </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail-card" style="background-color: pink;">Dema amano</div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                necessitatibus aperiam solutaliquam. Aspernatur dolore esse, recusandae, ad enim culpa
-                                adipisci tempore doloremque
-                                a!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail-card" style="background-color: pink;">Dema amano</div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail-card" style="background-color: pink;">Dema amano</div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="posted-card" style="background-color:#fff;">
-                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
-                    <div class="descriptive-card" style="display:flex; flex-direction:row">
-                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
-                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
-                        <div class="information-body"
-                            style=" display: flex; flex-direction: column; margin-left: 35px;">
-                            <a href="" class="information_body-title" style="font-size:20px;">Dema Amano</a>
-                            september 2,2022
-                            <div class="reporter-information"
-                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
-                                <div class="reporter-profile-image">
-                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
-                                    width: 40px; border-radius:100%">
-                                </div>
-                                <div class="reporter-name"> Dema Amano</div>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis odit
-                                aliquam. Aspernatur dolore esse, recusandae, ad enim culpa adipisci tempore doloremque
-                                necessitatibus aperiam soluta!</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="detail_card" style=" display: flex;
-                    flex-direction: row; justify-content: space-between; ">
-                        <div class="subject">Programming</div>
-                        <div class="reaction-section" style="display: flex;align-items: center; column-gap: 20px; ">
-                            <a href="" class="" style="background-color:pink"> <i class="fa-regular fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-comment"></i></a>
-                            <a href="" class="read-more"
-                                style="text-decoration: underline; font-size: 20px; color: black; text-decoration-thickness: 4px;">
-                                read more
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {%endfor%}
         </div>
         <div class="right-side" style="overflow: visible; position: relative;">
             <div class="cards" style="position: static;">
@@ -528,6 +117,7 @@
                     </div>
                 </div>
                 <div class="recent-card">
+                    {% for post in posts%}
                     <div class="row-recent-card">
                         <div class="video-part">dema amano
 
@@ -536,46 +126,12 @@
                         </div>
                         <div class="description">Dema amano</div>
                     </div>
-                    <div class="row-recent-card">
-                        <div class="video-part">
-                            Dema amano
-                        </div>
-                        <div class="description">Dema amano</div>
-                    </div>
-                    <div class="row-recent-card">
-                        <div class="video-part">
-                            Dema amano
-                        </div>
-                        <div class="description">Dema amano</div>
-                    </div>
-                    <div class="row-recent-card">
-                        <div class="video-part">
-                            Dema amano
-                        </div>
-                        <div class="description">Dema amano</div>
-                    </div>
-                    <div class="row-recent-card">
-                        <div class="video-part">
-                            Dema amano
-                        </div>
-                        <div class="description">Dema amano</div>
-                    </div>
-                    <div class="row-recent-card">
-                        <div class="video-part">
-                            Dema amano
-                        </div>
-                        <div class="description">Dema amano</div>
-                    </div>
-                    <div class="row-recent-card">
-                        <div class="video-part">
-                            Dema amano
-                        </div>
-                        <div class="description">Dema amano</div>
-                    </div>
+                    {%endfor%}
                 </div>
             </div>
         </div>
     </div>
 
 </div>
+
 {%endblock content%}
