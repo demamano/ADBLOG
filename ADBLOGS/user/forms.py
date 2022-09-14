@@ -5,3 +5,4 @@ class UserRegisterForm(UserCreationForm):
     class Meta: #nested namespace for configuration
         model = User
         fields = ['username','email','password1','password2']
+# class UserProfileForm

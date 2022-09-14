@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="{% static 'blog/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <linkhref="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/50e40ae8a3.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"> -->
-    <!-- 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 -->
+    <linkhref="https:
+        //fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/50e40ae8a3.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- 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 -->
 
 </head>
 
@@ -33,7 +33,9 @@
         <header class="header">
             <div class="top-header">
                 <div class="left-top-header">
-                    <button class="header_humberger icon-link">ADBLOGS NEWS</button>
+                    <button class="header_humberger icon-link">
+                        <span>A</span><span>D</span><span>B</span><span>L</span><span>O</span><span>G</span><span>S</span>
+                        NEWS</button>
                     <a href="#" class="header-cta"></a>
                 </div>
                 <div class="right-top-header">
@@ -42,7 +44,41 @@
                             <input type="text" placeholder="Search blogs" class="input">
                         </form>
                     </div>
-                    <a href="#" target="_blank" rel="nofollow" class="header-cta">Dema amano</a>
+                    {%if user.is_authenticated%}
+
+
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="{{user.profile.image.url}}" alt="Admin" width="40">
+                                <span>{{user.first_name}} {{user.last_name}}</span>
+                                <img src="{%static 'images/list.png' %}" style="height: 30px; width:30px" alt="">
+                            </a>
+
+                            <div class="dropdown">
+                                <ul id="align">
+                                    <li>
+                                        <a href="{%url 'profile'%}"><i class="fa-solid fa-user"></i>Profile</a>
+                                    </li>
+                                    <li><a href="#"><i class="fas fa-sliders-h"></i> Settings</a></li>
+                                    <li><a href="{%url 'logout'%}"><i class="fas fa-sign-out-alt"></i> Signout</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                    </ul>
+
+
+
+                    <script>
+                        document.querySelector(".right-top-header ul li").addEventListener("click", function () {
+                            this.classList.toggle("active");
+                        });
+                    </script>
+                    {%else%}
+                    <a href="{%url 'login'%}" target="_blank" rel="nofollow" class="header-cta">Login</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="bottom-header">
@@ -59,7 +95,7 @@
 
                 <div class="nav-right">
 
-                    Dema Amano
+
                 </div>
             </div>
 
@@ -74,6 +110,16 @@
                     <a href="#">dema</a>
 
                 </ul>
+                <div>
+                    dema amano rachole
+                </div>
+                <div>
+                    dema amano
+                </div>
+                <div> dema amano 
+                    dema amano 
+                    dema amano
+                </div>
             </div>
         </div>
     </div>

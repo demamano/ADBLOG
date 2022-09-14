@@ -1,0 +1,53 @@
+{% extends "blog/base.html"%}
+{%load static%}
+{% block content %}
+
+<div class="main-body">
+
+    <div class="body-content">
+        <div class="first-col">
+
+        </div>
+        <div class="middle-side">
+
+            <div class="posted-card" style="background-color:#fff;">
+                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
+                    <div class="descriptive-card" style="display:flex; flex-direction:row">
+                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
+                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
+                        <div class="information-body"
+                            style=" display: flex; flex-direction: column; margin-left: 35px;">
+
+                            <a href="" class="information_body-title" style="font-size:20px;">
+                                User Profile
+                            </a>
+                            {{user.date_joined}}
+
+                            <div class="reporter-information"
+                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
+                                <div class="reporter-profile-image" >
+                                    <img src="{{user.profile.image.url}}" alt="" class="profile-picture" style="height: 40px;
+                                    width: 40px; border-radius:100%">
+                                </div>
+                                <div class="reporter-name">
+                                    {{user.first_name}} {{user.last_name}}
+                                </div>
+                            </div>
+                            <p> {{user.email}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="detail-card" style="background-color: pink;">
+                        {{user.profile.bio}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-side" style="overflow: visible; position: relative;">
+            <div class="cards" style="position: static;">
+            </div>
+        </div>
+    </div>
+
+</div>
+{%endblock content%}
