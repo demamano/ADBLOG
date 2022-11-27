@@ -99,6 +99,34 @@
                     <div class="detail-card" style="background-color: pink;">Dema amano</div>
                 </div>
             </div>
+            <div class="posted-card" style="background-color:#fff;">
+                <div class="posted-information" style="display: flex; flex-direction: column; margin: 5px;">
+                    <div class="descriptive-card" style="display:flex; flex-direction:row">
+                        <div class="post-image" style=""><img src="{% static 'images/c++.png' %}"
+                                style=" width: 250px; z-index:3px; height:180px;" alt=""></div>
+                        <div class="information-body"
+                            style=" display: flex; flex-direction: column; margin-left: 35px;">
+
+                            <a href="" class="information_body-title" style="font-size:20px;">Dema
+                                Amano</a>
+                            <!-- september 2,2022 -->
+                            {{post.pub_date |date:"F d,Y"}}
+                            <div class="reporter-information"
+                                style="display: flex; flex-direction:row; column-gap: 10px; align-items: center;">
+                                <div class="reporter-profile-image">
+                                    <img src="{%static 'images/anonymous.jpg'%}" alt="" class="profile-picture" style="height: 40px;
+                                    width: 40px; border-radius:100%">
+                                </div>
+                                <div class="reporter-name">{{post.reporter.first_name}} {{post.reporter.last_name}}
+                                </div>
+                            </div>
+                            <p>{{post.headline}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="detail-card" style="background-color: pink;">Dema amano</div>
+                </div>
+            </div>
             {%endfor%}
         </div>
         <div class="right-side" style="overflow: visible; position: relative;">
@@ -109,7 +137,15 @@
                     </div>
                 </div>
                 <div class="about-card">
-                    <div class="about-header"> <img src="{% static 'images/template.png' %}" alt=""></div>
+                    <div class="about-header"> About Bit.ai
+                        Bit.ai is the essential next-gen workplace and document collaboration platform. that helps teams
+                        share knowledge by connecting any type of digital content. With this intuitive, cloud-based
+                        solution, anyone can work visually and collaborate in real-time while creating internal notes,
+                        team projects, knowledge bases, client-facing content, and more.
+
+                        The smartest online Google Docs and Word alternative, Bit.ai is used in over 100 countries by
+                        professionals everywhere, from IT teams creating internal documentation and knowledge bases, to
+                        sales and marketing teams sharing client materials and client portals.</div>
                     <div class="about-text">Dema amano</div>
                     <div class="about-image-part">
                         <img src="" alt="">
